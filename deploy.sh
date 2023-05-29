@@ -18,17 +18,8 @@ chmod 775 -R ./
 printf "generate application key ...\n"
 ./vendor/bin/sail artisan key:generate
 
-printf "run migrations ...\n"
-./vendor/bin/sail artisan migrate:fresh
-
-printf "seeding database ...\n"
-./vendor/bin/sail artisan db:seed
-
-printf "confirm migrations ...\n"
-./vendor/bin/sail artisan migrate:fresh
-
-printf "confirm seeding database ...\n"
-./vendor/bin/sail artisan db:seed
+./db_migration.sh
+./db_migration.sh
 
 printf "install frontend dependencies ...\n"
 ./vendor/bin/sail npm install
