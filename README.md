@@ -18,6 +18,7 @@ Naj-Library is a mini web application To manage a library books, it allows the f
 
 ## Demo
 
+- Link: [https://naj.bsecom.com/login](https://naj.bsecom.com/login)
 - Credentials: `email: library.manager@naj.ae` | `password: password`
 
 ### Informations
