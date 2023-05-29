@@ -14,6 +14,9 @@ Naj-Library is a mini web application To manage a library books, it allows the f
 - make sure You have [Docker](https://www.docker.com/products/docker-desktop/) installed and configured.
 - `git clone https://github.com/abderrahmanbelbachir/naj-library.git`
 - `./deploy.sh`
+- `./vendor/bin/sail artisan migrate:fresh`
+- `./vendor/bin/sail artisan db:seed`
+- `./serve.sh`
 - Navigate to `http://localhost:89/login`
 
 ## Demo

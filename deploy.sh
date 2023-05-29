@@ -18,9 +18,6 @@ chmod 775 -R ./
 printf "generate application key ...\n"
 ./vendor/bin/sail artisan key:generate
 
-./db_migration.sh
-./db_migration.sh
-
 printf "install frontend dependencies ...\n"
 ./vendor/bin/sail npm install
 
