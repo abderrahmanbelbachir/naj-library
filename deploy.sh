@@ -12,6 +12,9 @@ printf "remove any previous images ...\n"
 printf "build application ...\n"
 ./vendor/bin/sail up -d
 
+printf "checking files permissions ...\n"
+chmod 775 -R ./
+
 printf "generate application key ...\n"
 ./vendor/bin/sail artisan key:generate
 
@@ -21,8 +24,11 @@ printf "run migrations ...\n"
 printf "seeding database ...\n"
 ./vendor/bin/sail artisan db:seed
 
-printf "checking files permissions ...\n"
-chmod 775 -R ./
+printf "confirm migrations ...\n"
+./vendor/bin/sail artisan migrate:fresh
+
+printf "confirm seeding database ...\n"
+./vendor/bin/sail artisan db:seed
 
 printf "install frontend dependencies ...\n"
 ./vendor/bin/sail npm install
