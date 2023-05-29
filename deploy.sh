@@ -10,7 +10,7 @@ printf "remove any previous images ...\n"
 ./vendor/bin/sail down --rmi all -v
 
 printf "build application ...\n"
-./vendor/bin/sail up
+./vendor/bin/sail up -d
 
 printf "generate application key ...\n"
 ./vendor/bin/sail artisan key:generate
